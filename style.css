@@ -37,7 +37,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* wrap susunan rapi */
 }
 
 nav ul li {
@@ -81,19 +81,27 @@ nav ul li:hover ul.dropdown-content {
   display: block;
 }
 
-/* Atur khusus untuk mobile */
+/* Untuk HP (≤768px) */
 @media (max-width: 768px) {
   nav ul {
-    flex-wrap: nowrap; /* tidak turun ke bawah */
-    overflow-x: auto;  /* bisa di-scroll ke samping jika tidak muat */
+    flex-direction: column; /* ubah jadi kolom vertikal */
+    align-items: center; /* tengah */
+    flex-wrap: nowrap; /* tidak perlu wrap horizontal */
+    overflow-x: unset; /* hapus scroll horizontal */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* jarak antar item supaya rapi */
   }
 
   nav ul li a {
-    padding: 10px 12px; /* lebih kecil agar muat */
-    font-size: 12px;    /* font lebih kecil supaya rapi */
-    white-space: nowrap; /* pastikan tidak turun ke bawah */
+    padding: 10px 15px;
+    font-size: 14px; /* bisa disesuaikan, agar tetap terbaca */
+    width: 100%;
+    text-align: center;
   }
 }
+
 
 header .overlay {
   background: rgba(0, 0, 0, 0.5);
