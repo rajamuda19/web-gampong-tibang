@@ -25,12 +25,16 @@ header {
   header {
     height: 500px; /* bisa lebih tinggi sesuai desain */
     background-position: center center;
+  }
+@media (max-width: 768px) {
+  body {
+    transform: scale(0.75);
+    transform-origin: top center;
+  }
+}
   
 
 
-
-  }
-}
 
 /* HP atau layar kecil (<= 768px) */
 @media (max-width: 768px) {
