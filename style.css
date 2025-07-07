@@ -14,7 +14,7 @@ header {
   background-size: 130%; /* zoom in */
   background-position: center center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; ← hapus gak cocok di hp */
+ 
   height: 200px; /* default tuk laptop */
   position: relative;
   color: white;
@@ -35,7 +35,7 @@ header {
 /* HP atau layar kecil (<= 768px) */
 @media (max-width: 768px) {
   header {
-    height: 400px; /* lebih pendek agar pas di HP */
+    height: 200px; /* lebih pendek agar pas di HP */
     background-position: center center; /* fokus ke tengah gambar */
   }
 }
