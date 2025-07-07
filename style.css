@@ -1,5 +1,9 @@
+html {
+    scroll-behavior: smooth; /* Memungkinkan scroll halus ketika mengklik tautan */
+}
+
 body {
-    margin: 0;
+    margin: 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
@@ -7,13 +11,19 @@ body {
 
 header {
     background-image: url('gambar/foto.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    position: relative;
-    color: white;
-}
+    background-size: 100% ; /*gambar zoom in %> zoom out %<*/
+    background-repeat: no-repeat; /*GAMBAR TIDAK DI ULANG*/
+    background-attachment: fixed; /*GAMBAR TIDAK DI SCROLL*/
+    background-size: cover; /*GAMBAR DI ZOOM IN*/
+    background-color: #006400; /* Warna latar belakang header */
+    background-image: linear-gradient(rgba(59, 162, 180, 0.5), rgba(59, 162, 180, 0.5)), url('gambar/foto.jpg'); /* Warna gradasi hijau di atas gambar */
+    
+    background-position: center top 38%;
+    height: 450px; /* tinggi gambar header */
+    position: relative; /* agar overlay bisa menutupi gambar */
+    color: white; /* Warna teks di header */
 
+}
 header .overlay {
     background: rgba(0, 0, 0, 0.5);
     height: 100%;
@@ -25,7 +35,7 @@ header .overlay {
 }
 
 nav {
-    background-color: #006400;
+    background-color: #006400; 
 }
 
 nav ul {
@@ -35,6 +45,12 @@ nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+
+nav ul li a:hover {
+    color: rgba(255, 238, 0, 0.918); /*warna font menu ketika hover/diarahkan kursor*/
+    border-bottom: 2px solid rgba(255, 238, 0, 0.918); /*garis bawah menu ketika hover/diarahkan kursor*/
 }
 
 nav ul li {
@@ -50,18 +66,111 @@ nav ul li a {
 main {
     padding: 20px;
 }
-
 section {
+    border: 1px solid #006400; /* Ketebalan 3px, warna hijau gelap      | */
+    border-radius: 10px;       /* Agar ujungnya agak melengkung           | */        
+    padding: 20px;             /* Jarak isi ke tepi *                     | */  /* WARNA BORDER KOLOM */   
+    margin-bottom: 30px;       /* Jarak antar kolom *                     | */
+    background-color: white;   /* Latar putih agar kontras *            | */
+}
+
+section { /*KOLOM KONTEN*/
     margin-bottom: 30px;
-    background-color: white;
+    background-color: white; /* Warna latar belakang konten = KOLOM */
     padding: 20px;
     border-radius: 10px;
 }
 
 footer {
-    background-color: #006400;
+    background-color: #006400;/* Warna latar belakang footer */
     color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
+    text-align: center; /* Teks rata tengah */ /*POSISI TULISAN FOOTER*/
+    padding: 15px 0; /* Jarak atas dan bawah footer */
+    margin-top: 30px; /* Jarak atas footer dari konten sebelumnya */
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #006400; /* Warna latar belakang semua menu */
+  display: flex;
+}
+
+nav ul li {
+  position: relative; /* agar sub-menu bisa absolute relatif ke parent */
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: #0077aa; /* Warna latar belakang menu ketika hover/diarahkan kursor */
+}
+
+/* Sub-menu */
+nav ul li ul.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0099cc;
+  min-width: 180px;
+  z-index: 1;
+}
+
+nav ul li ul.dropdown-content li a {
+  padding: 10px 15px;
+}
+
+nav ul li:hover ul.dropdown-content {
+  display: block;
+}
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+.marquee-container {
+  background: linear-gradient(90deg, #006400, #006400); /* Warna gradasi latar belakang header */
+  color: white;
+  padding: 10px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.marquee-content {
+  background-color: #006400 ; /* Warna latar belakang konten marquee */
+  color: oklab(97.614% 0 -0.00011); /* Warna teks */        
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: marquee 25s linear infinite; /* Durasi animasi 25 detik */
+}
+
+.marquee-content span {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }

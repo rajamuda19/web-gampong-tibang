@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Struktur Organisasi KPM Tematik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+    
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: green;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .struktur {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 10px;
+    }
+    .level {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 150px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      height: 120px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 10px 0 5px 0;
+      font-size: 16px;
+    }
+    .card p {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+  
+</head>
+
+
+<body>
+  <header>
+    <h1>Struktur Organisasi KPM Tematik Pojok Statistik UINAR</h1>
+  </header>
+  <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            
+            <li class="dropdown">
+                <a href="#">Berita ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Berita Gampong</a></li>
+                    <li><a href="#">Pengumuman</a></li>
+                    <li><a href="#">Kegiatan</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Profil Gampong ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Profil Wilayah Desa</a></li>
+                    <li><a href="#">Sejarah Desa</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Pemerintahan Desa</a></li>
+            <li><a href="#">Data Desa</a></li>
+
+            <li class="dropdown">
+                <a href="#">KPM Tematik Pojok Statistik UINAR ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="strukturorganisasikpm.html">Struktur Organisasi</a></li>
+                    <li><a href="#">Kegiatan & Galeri</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+  <div class="struktur">
+    <!-- Level Atas -->
+    <div class="level">
+      <div class="card">
+        <img src="gambar/sekretaris.jpg" alt="Sekretaris">
+        <h3>Nama Sekretaris</h3>
+        <p>Sekretaris</p>
+      </div>
+      <div class="card">
+        <img src="gambar/ketua.jpg" alt="Ketua">
+        <h3>Muhammad Raja Muda Ramadhana</h3>
+        <p>Ketua</p>
+      </div>
+      <div class="card">
+        <img src="gambar/bendahara.jpg" alt="Bendahara">
+        <h3>Nama Bendahara</h3>
+        <p>Bendahara</p>
+      </div>
+    </div>
+
+    <!-- Level Tengah -->
+    <div class="level">
+      <div class="card">
+        <img src="gambar/pj1.jpg" alt="PJ">
+        <h3>Nama PJ 1</h3>
+        <p>PJ</p>
+      </div>
+      <div class="card">
+        <img src="gambar/pdd.jpg" alt="PDD">
+        <h3>Nama PDD</h3>
+        <p>PDD</p>
+      </div>
+      <div class="card">
+        <img src="gambar/pj2.jpg" alt="PJ">
+        <h3>Nama PJ 2</h3>
+        <p>PJ</p>
+      </div>
+    </div>
+
+    <!-- Level Bawah -->
+    <div class="level">
+      <div class="card">
+        <img src="gambar/anggota1.jpg" alt="Anggota">
+        <h3>Nama Anggota 1</h3>
+        <p>Anggota</p>
+      </div>
+      <div class="card">
+        <img src="gambar/anggota2.jpg" alt="Anggota">
+        <h3>Nama Anggota 2</h3>
+        <p>Anggota</p>
+      </div>
+      <div class="card">
+        <img src="gambar/anggota3.jpg" alt="Anggota">
+        <h3>Nama Anggota 3</h3>
+        <p>Anggota</p>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background: green; color: white; text-align: center; padding: 10px;">
+    &copy; 2025 KPM Tematik Pojok Statistik UIN Ar-Raniry
+  </footer>
+</body>
+</html>
