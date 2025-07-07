@@ -14,25 +14,19 @@ header {
   background-size: 130%; /* zoom in */
   background-position: center center;
   background-repeat: no-repeat;
- 
-  height: 200px; /* default tuk laptop */
+  height: 200px; /* default untuk mobile */
   position: relative;
   color: white;
 }
 
-/* layar lebar ato laptop (> 768px) */
+/* Layar lebar atau laptop (> 768px) */
 @media (min-width: 768px) {
   header {
-    height: 500px; /* bisa lebih tinggi sesuai desain */
+    height: 500px; /* bisa diubah sesuai kebutuhan */
     background-position: center center;
   }
-  
-/* HP atau layar kecil (<= 768px) */
-@media (max-width: 768px) {
-  header {
-    height: 200px; /* lebih pendek agar pas di HP */
-    background-position: center center; /* fokus ke tengah gambar */
-  }
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -73,9 +67,6 @@ nav ul li:hover {
     white-space: nowrap; /* pastikan tidak turun ke bawah */
   }
 }
-
-
-
 
 header .overlay {
   background: rgba(0, 0, 0, 0.5);
