@@ -38,7 +38,6 @@ header {
     height: 200px; /* lebih pendek agar pas di HP */
     background-position: center center; /* fokus ke tengah gambar */
   }
-}
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -46,7 +45,7 @@ nav ul {
   display: flex;
   background-color: #006400;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* default wrap supaya laptop tetap rapi */
 }
 
 nav ul li {
@@ -59,6 +58,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px; /* default laptop */
 }
 
 nav ul li:hover {
@@ -68,19 +68,17 @@ nav ul li:hover {
 /* Atur khusus untuk mobile */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
+    flex-wrap: nowrap; /* tidak turun ke bawah */
+    overflow-x: auto;  /* bisa di-scroll ke samping jika tidak muat */
   }
 
   nav ul li a {
-    padding: 10px 0;
+    padding: 10px 12px; /* lebih kecil agar muat */
+    font-size: 12px;    /* font lebih kecil supaya rapi */
+    white-space: nowrap; /* pastikan tidak turun ke bawah */
   }
 }
+
 
 
 
