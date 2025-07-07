@@ -11,21 +11,35 @@ body {
 
 header {
   background-image: linear-gradient(rgba(59, 162, 180, 0.5), rgba(59, 162, 180, 0.5)), url('gambar/foto.jpg');
-  background-size: cover;
-  background-position: center top 38%;
+  background-size: 101%; /* zoom in */
+  background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 450px;
+  /* background-attachment: fixed; ← hapus gak cocok di hp */
+  height: 200px; /* default tuk laptop */
   position: relative;
   color: white;
 }
 
-@media (max-width: 768px) {
+/* layar lebar ato laptop (> 768px) */
+@media (min-width: 768px) {
   header {
-    height: 200px; /* disesuaikan untuk HP */
+    height: 500px; /* bisa lebih tinggi sesuai desain */
     background-position: center center;
+  
+
+
+
   }
 }
+
+/* HP atau layar kecil (<= 768px) */
+@media (max-width: 768px) {
+  header {
+    height: 400px; /* lebih pendek agar pas di HP */
+    background-position: center center; /* fokus ke tengah gambar */
+  }
+}
+
 
 header .overlay {
   background: rgba(0, 0, 0, 0.5);
@@ -113,7 +127,7 @@ footer {
 .marquee-container {
   background: linear-gradient(90deg, #006400, #006400);
   color: white;
-  padding: 10px 0;
+  padding: 2px 0;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
