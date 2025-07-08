@@ -85,18 +85,17 @@ nav ul li:hover ul.dropdown-content {
   nav ul {
     flex-wrap: wrap; /* turun ke bawah */
     justify-content: space-between ; /* rata kiri-kanan */
-    gap: 4px; /*jarak hori dan ver */ 
+    gap: 2px; /*jarak hori dan ver */ 
   }
 
 nav ul li {
 flex: 1 1 25%; /* turun ke bwh klau ga muat*/
-text-align: center ;
 margin: 2px 0;
 }
 
   nav ul li a {
-    padding: 6px 8px; /* lebih kecil agar muat */
-    font-size: 12px;    /* font lebih kecil supaya rapi */
+    padding: 4px 6px; /* lebih kecil agar muat */
+    font-size: 5px;    /* font lebih kecil supaya rapi */
   }
 }
 
