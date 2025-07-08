@@ -83,9 +83,11 @@ nav ul li:hover ul.dropdown-content {
 /* Atur khusus untuk mobile */
 @media (max-width: 768px) {
   nav ul {
-    flex-wrap: nowrap; /* tidak turun ke bawah */
-    overflow-x: auto;  /* bisa di-scroll ke samping jika tidak muat */
+    flex-wrap: wrap; /* tidak turun ke bawah */
+    overflow: visible ;  /* bisa di-scroll ke samping jika tidak muat */
+    justify-content: center; /* tengah */
   }
+}
 
   nav ul li a {
     padding: 10px 12px; /* lebih kecil agar muat */
