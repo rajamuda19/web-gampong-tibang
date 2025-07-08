@@ -32,52 +32,67 @@ nav {
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* rata tengah */
-  flex-wrap: wrap; /* default wrap ke bawah jika tidak muat */
+  justify-content: center;
+  flex-wrap: wrap; /* wrap susunan rapi */
 }
 
 nav ul li {
   position: relative;
-  margin: 5px 10px; /* jarak antar menu */
+  margin: 0 15px;
 }
 
 nav ul li a {
   display: block;
-  padding: 12px 16px;
+  padding: 15px 20px;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
-  white-space: nowrap;
+  font-size: 16px; /* default laptop */
 }
 
 nav ul li a:hover {
   color: rgba(255, 238, 0, 0.918);
   border-bottom: 2px solid rgba(255, 238, 0, 0.918);
 }
-
 nav ul li:hover {
   background-color: #0077aa;
 }
 
-/* Hanya di HP / layar kecil */
+nav ul li ul.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0099cc;
+  min-width: 180px;
+  z-index: 1;
+}
+
+nav ul li ul.dropdown-content li a {
+  padding: 10px 15px;
+}
+
+nav ul li:hover ul.dropdown-content {
+  display: block;
+}
+
+/* Atur khusus untuk mobile */
 @media (max-width: 768px) {
   nav ul {
-    justify-content: center; /* tetap rata tengah */
-    flex-wrap: wrap;        /* otomatis wrap ke bawah */
+    flex-wrap: nowrap; /* tidak turun ke bawah */
+    overflow-x: auto;  /* bisa di-scroll ke samping jika tidak muat */
   }
 
   nav ul li a {
-    padding: 8px 12px;      /* lebih kecil agar muat */
-    font-size: 14px;        /* font lebih kecil supaya rapi */
+    padding: 10px 12px; /* lebih kecil agar muat */
+    font-size: 12px;    /* font lebih kecil supaya rapi */
+    white-space: nowrap; /* pastikan tidak turun ke bawah */
   }
 }
-
-
 
 header .overlay {
   background: rgba(0, 0, 0, 0.5);
