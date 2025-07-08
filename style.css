@@ -22,7 +22,7 @@ header {
 /* Layar lebar atau laptop (> 768px) */
 @media (min-width: 768px) {
   header {
-    height: 500px; /* bisa diubah sesuai kebutuhan */
+    height: 300px; /* bisa diubah sesuai kebutuhan */
     background-position: center center;
   }
 }
