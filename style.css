@@ -69,13 +69,20 @@ nav ul li ul.dropdown-content {
   left: 0;
   background-color: #0099cc;
   min-width: 180px;
+  max-width: 100vw;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  overworld-wrap: break-word;
   z-index: 1;
 }
 
 nav ul li ul.dropdown-content li a {
   padding: 10px 15px;
 }
-
+nav ul li.dropdown-content {
+  position: static;
+  width: 100%
+}
 nav ul li:hover ul.dropdown-content {
   display: block;
 }
@@ -83,13 +90,17 @@ nav ul li:hover ul.dropdown-content {
 /* Atur khusus untuk mobile */
 @media (max-width: 768px) {
   nav ul {
+    display: flex;
     flex-wrap: wrap; /* turun ke bawah */
     justify-content: center ; /*  */
-    gap: 2px; /*jarak hori dan ver */ 
+    padding: 5px;
+    gap: 4px; /*jarak hori dan ver */ 
   }
+}
 
 nav ul li {
-flex: 1 1 15%; /* turun ke bwh klau ga muat*/
+flex: 1 1 25%; /* turun ke bwh klau ga muat*/ 
+text-align: center;
 margin: 4px 0;
 }
 
