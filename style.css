@@ -24,8 +24,10 @@ header {
   header {
     height: 400px; /* bisa diubah sesuai kebutuhan */
     background-position: center 40%; /* mengatur ke bawah dan atas foto header */
+  body{
+    font-size: 16px; /*font body */
   }
-}
+} 
 
 nav {
   background-color: #006400;
@@ -95,6 +97,8 @@ nav ul li:hover ul.dropdown-content {
     justify-content: center ; /*  */
     padding: 5px;
     gap: 4px; /*jarak hori dan ver */ 
+  body {
+    font-size: 16px;
   }
 }
 
@@ -168,3 +172,10 @@ footer {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
+
+
+
+
+
+
+
