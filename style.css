@@ -8,7 +8,12 @@ body {
   background-color: #f4f4f4;
   color: #333;
 }
-
+  /* Font size untuk layar kecil */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
 header {
   background-image: linear-gradient(rgba(59, 162, 180, 0.5), rgba(59, 162, 180, 0.5)), url('gambar/foto.jpg');
   background-size: 110%; /* zoom in */
@@ -24,8 +29,6 @@ header {
   header {
     height: 400px; /* bisa diubah sesuai kebutuhan */
     background-position: center 40%; /* mengatur ke bawah dan atas foto header */
-  body{
-    font-size: 16px; /*font body */
   }
 } 
 
@@ -97,9 +100,7 @@ nav ul li:hover ul.dropdown-content {
     justify-content: center ; /*  */
     padding: 5px;
     gap: 4px; /*jarak hori dan ver */ 
-  body {
-    font-size: 16px;
-  }
+   }
 }
 
 nav ul li {
