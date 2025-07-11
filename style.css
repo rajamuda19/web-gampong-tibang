@@ -13,7 +13,7 @@ body {
 
 @media (min-width: 768px) {
     body {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -120,7 +120,7 @@ margin: 4px 0;
 
   nav ul li a {
     padding: 6px 6px; /* lebih kecil agar muat */
-    font-size: 10px;    /* font lebih kecil supaya rapi */
+    font-size: 16px;    /* font lebih kecil supaya rapi */
   }
 }
 
