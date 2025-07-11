@@ -154,12 +154,6 @@ footer {
     text-align: center;
     margin: 2px 0;
   }
-
-  nav ul li a {
-    padding: 8px;
-    font-size: 10px;
-  }
-
   nav ul li ul.dropdown-content {
     position: static;
     display: none;
@@ -180,5 +174,10 @@ footer {
 
   .marquee-content span {
     font-size: 14px;
+  }
+  @media (max-width: 768px) {
+  nav ul li a {
+    padding: 8px;
+    font-size: 10px; /* ← INI bagian untuk HP */
   }
 }
