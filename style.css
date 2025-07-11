@@ -24,19 +24,18 @@ body {
 
 header {
   background-image: linear-gradient(rgba(59, 162, 180, 0.5), rgba(59, 162, 180, 0.5)), url('gambar/foto.jpg');
-  background-size: 110%; /* zoom in */
+  background-size: 110%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 200px; /* default untuk mobile */
+  height: 200px;
   position: relative;
   color: white;
 }
 
-/* Layar lebar atau laptop (> 768px) */
 @media (min-width: 768px) {
   header {
-    height: 400px; /* bisa diubah sesuai kebutuhan */
-    background-position: center 40%; /* mengatur ke bawah dan atas foto header */
+    height: 400px;
+    background-position: center 40%;
   }
 }
 
@@ -56,6 +55,7 @@ nav ul {
 nav ul li {
   position: relative;
   margin: 0 15px;
+  box-sizing: border-box;
 }
 
 nav ul li a {
@@ -64,7 +64,8 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px; /* default laptop */
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 nav ul li a:hover {
@@ -94,22 +95,38 @@ nav ul li:hover ul.dropdown-content {
   display: block;
 }
 
-/* Atur khusus untuk mobile */
+/* Mobile Styles */
 @media (max-width: 768px) {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2px;
+    gap: 0;
   }
 
   nav ul li {
     flex: 1 1 15%;
-    margin: 4px 0;
+    margin: 2px 2px;
+    border: 1px solid #fff;           /* Border putih per kolom */
+    border-radius: 6px;
+    background: #00774d;              /* Optional: warna kotak menu mobile */
+    overflow: hidden;
   }
 
   nav ul li a {
-    padding: 6px 6px;
-    font-size: 10px;
+    padding: 10px 4px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+/* Atur agar border dan hover tidak melewati garis pada mobile */
+@media (max-width: 768px) {
+  nav ul li a:hover {
+    border-bottom: 2px solid rgba(255, 238, 0, 0.918);
+    border-radius: 0 0 6px 6px;
+  }
+  nav ul li:hover {
+    background-color: #00885a;
   }
 }
 
@@ -133,6 +150,17 @@ section {
   padding: 20px;
   margin-bottom: 30px;
   background-color: white;
+  text-align: justify;   /* rata kiri-kanan */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  section {
+    max-width: 100%;
+    padding: 10px;
+  }
 }
 
 footer {
