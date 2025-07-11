@@ -11,19 +11,18 @@ body {
 
 header {
   background-image: linear-gradient(rgba(59, 162, 180, 0.5), rgba(59, 162, 180, 0.5)), url('gambar/foto.jpg');
-  background-size: 110%; /* zoom in */
-  background-position: center ;
+  background-size: 110%;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 200px; /* default untuk mobile */
+  height: 200px;
   position: relative;
   color: white;
 }
 
-/* Layar lebar atau laptop (> 768px) */
 @media (min-width: 768px) {
   header {
-    height: 400px; /* bisa diubah sesuai kebutuhan */
-    background-position: center 40%; /* mengatur ke bawah dan atas foto header */
+    height: 400px;
+    background-position: center 40%;
   }
 }
 
@@ -37,12 +36,13 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* wrap susunan rapi */
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 nav ul li {
   position: relative;
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
@@ -51,13 +51,15 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px; /* default laptop */
+  font-size: 16px;
+  text-align: center;
 }
 
 nav ul li a:hover {
   color: rgba(255, 238, 0, 0.918);
   border-bottom: 2px solid rgba(255, 238, 0, 0.918);
 }
+
 nav ul li:hover {
   background-color: #0077aa;
 }
@@ -78,25 +80,6 @@ nav ul li ul.dropdown-content li a {
 
 nav ul li:hover ul.dropdown-content {
   display: block;
-}
-
-/* Atur khusus untuk mobile */
-@media (max-width: 768px) {
-  nav ul {
-    flex-wrap: wrap; /* turun ke bawah */
-    justify-content: center ; /*  */
-    gap: 2px; /*jarak hori dan ver */ 
-  }
-
-nav ul li {
-flex: 1 1 15%; /* turun ke bwh klau ga muat*/
-margin: 4px 0;
-}
-
-  nav ul li a {
-    padding: 6px 6px; /* lebih kecil agar muat */
-    font-size: 10px;    /* font lebih kecil supaya rapi */
-  }
 }
 
 header .overlay {
@@ -156,4 +139,46 @@ footer {
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
+}
+
+/* ======== PERBAIKAN TAMPAILAN MOBILE ======== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  nav ul li {
+    flex: 1 1 30%; /* maksimal 3 menu per baris */
+    text-align: center;
+    margin: 2px 0;
+  }
+
+  nav ul li a {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  nav ul li ul.dropdown-content {
+    position: static;
+    display: none;
+    width: 100%;
+    background-color: #0099cc;
+    box-shadow: none;
+  }
+
+  nav ul li:hover ul.dropdown-content {
+    display: block;
+  }
+
+  nav ul li ul.dropdown-content li a {
+    padding: 8px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .marquee-content span {
+    font-size: 14px;
+  }
 }
