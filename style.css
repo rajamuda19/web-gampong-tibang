@@ -1,19 +1,8 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
-    font-size: 16px;
-}
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-  }
-}
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
- }
-}
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
@@ -155,11 +144,11 @@ footer {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: marquee 15s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
 .marquee-content span {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
