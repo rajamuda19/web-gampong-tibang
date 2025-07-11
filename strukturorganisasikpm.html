@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <title>Struktur Organisasi KPM Tematik</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="style.css" />
-    
+  <link rel="stylesheet" href="style.css" />
+  <!-- Tambahkan CSS Modal -->
+  <link rel="stylesheet" href="job-desk.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,6 +40,7 @@
       width: 150px;
       text-align: center;
       transition: transform 0.3s;
+      cursor: pointer;
     }
     .card:hover {
       transform: scale(1.05);
@@ -79,13 +81,8 @@
          height: 90px;
        }
     }
-      
-      
   </style>
-  
 </head>
-
-
 <body>
   <header>
     <h1>Struktur Organisasi KPM Tematik Pojok Statistik UINAR</h1>
@@ -129,17 +126,17 @@
   <div class="struktur">
     <!-- Level Atas -->
     <div class="level">
-      <div class="card">
+      <div class="card" data-nama="Dwi Maisri Diana" data-jabatan="Sekretaris" data-jobdesk="Mengurus bla bla" data-foto="gambar/dwi.jpg">
         <img src="gambar/dwi.jpg" alt="dwi">
         <h3>Dwi Maisri Diana</h3>
         <p>Sekretaris</p>
       </div>
-      <div class="card">
+      <div class="card" data-nama="Muhammad Raja Muda Ramadhana" data-jabatan="Ketua" data-jobdesk="Bertanggung Jawab Kelancaran bla bla" data-foto="gambar/ketua.jpg">
         <img src="gambar/ketua.jpg" alt="raja">
         <h3>Muhammad Raja Muda Ramadhana</h3>
         <p>Ketua</p>
       </div>
-      <div class="card">
+      <div class="card" data-nama="Teti Omairah" data-jabatan="Bendahara" data-jobdesk="Mencatat" data-foto="gambar/teti.jpg">
         <img src="gambar/teti.jpg" alt="teti">
         <h3>Teti Omairah</h3>
         <p>Bendahara</p>
@@ -148,17 +145,17 @@
 
     <!-- Level Tengah -->
     <div class="level">
-      <div class="card">
+      <div class="card" data-nama="Intan Akmarina" data-jabatan="PJ PDD" data-jobdesk="Dokumentasi" data-foto="gambar/intan.jpg">
         <img src="gambar/intan.jpg" alt="intan">
         <h3>Intan Akmarina</h3>
         <p>PJ PDD</p>
       </div>
-      <div class="card">
+      <div class="card" data-nama="Fauzan Azima" data-jabatan="PJ PDD" data-jobdesk="Dekorasi Desain" data-foto="gambar/fauzan.jpg">
         <img src="gambar/fauzan.jpg" alt="fauzan">
         <h3>Fauzan Azima</h3>
         <p>PJ PDD</p>
       </div>
-      <div class="card">
+      <div class="card" data-nama="Alfiratur Rahmi" data-jabatan="PJ PDD" data-jobdesk="Desain Editing" data-foto="gambar/rahmi.jpg">
         <img src="gambar/rahmi.jpg" alt="rahmi">
         <h3>Alfiratur Rahmi</h3>
         <p>PJ PDD</p>
@@ -167,17 +164,17 @@
 
     <!-- Level Bawah -->
     <div class="level">
-      <div class="card">
+      <div class="card" data-nama="Shofiana" data-jabatan="PJ Konsumsi" data-jobdesk="Mengatur konsumsi" data-foto="gambar/shofi.jpg">
         <img src="gambar/shofi.jpg" alt="shofi">
         <h3>Shofiana</h3>
         <p>PJ Konsumsi</p>
       </div>
-      <div class="card">
+      <div class="card" data-nama="Mahratul Husna" data-jabatan="PJ Acara" data-jobdesk="Menyusun rundown" data-foto="gambar/husna.jpg">
         <img src="gambar/husna.jpg" alt="husna">
         <h3>Mahratul Husna</h3>
         <p>PJ Acara</p>
       </div>
-      <div class="card">
+      <div class="card" data-nama="Mauliana" data-jabatan="PJ Konsumsi" data-jobdesk="Mengatur membantu konsumsi" data-foto="gambar/mauliana.jpg">
         <img src="gambar/mauliana.jpg" alt="yana">
         <h3>Mauliana</h3>
         <p>PJ Konsumsi</p>
@@ -185,8 +182,39 @@
     </div>
   </div>
 
+  <!-- Modal Jobdesk -->
+  <div class="overlay-blur" id="jobdeskOverlay" style="display:none;">
+    <div class="jobdesk-modal">
+      <button class="jobdesk-close" id="closeJobdesk">&times;</button>
+      <img id="jobdeskFoto" src="" alt="foto" class="jobdesk-foto">
+      <h3 id="jobdeskNama"></h3>
+      <h4 id="jobdeskJabatan"></h4>
+      <p id="jobdeskDeskripsi"></p>
+    </div>
+  </div>
+
   <footer style="background: green; color: white; text-align: center; padding: 10px;">
     &copy; 2025 KPM Tematik Pojok Statistik UIN Ar-Raniry
   </footer>
+
+  <!-- Script untuk Modal Jobdesk -->
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', function() {
+        document.getElementById('jobdeskNama').textContent = card.getAttribute('data-nama');
+        document.getElementById('jobdeskJabatan').textContent = card.getAttribute('data-jabatan');
+        document.getElementById('jobdeskDeskripsi').textContent = card.getAttribute('data-jobdesk');
+        document.getElementById('jobdeskFoto').src = card.getAttribute('data-foto');
+        document.getElementById('jobdeskOverlay').style.display = 'flex';
+        window.scrollTo(0,0);
+      });
+    });
+    document.getElementById('closeJobdesk').onclick = function() {
+      document.getElementById('jobdeskOverlay').style.display = 'none';
+    };
+    document.getElementById('jobdeskOverlay').onclick = function(e) {
+      if(e.target === this) this.style.display = 'none';
+    };
+  </script>
 </body>
 </html>
