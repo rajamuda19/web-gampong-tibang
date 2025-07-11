@@ -19,7 +19,7 @@ body {
 
 @media (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 10px;
     }
 }
 
@@ -65,7 +65,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px; /* default laptop */
+  font-size: 14px; /* default laptop */
 }
 
 nav ul li a:hover {
@@ -120,7 +120,7 @@ margin: 4px 0;
 
   nav ul li a {
     padding: 6px 6px; /* lebih kecil agar muat */
-    font-size: 16px;    /* font lebih kecil supaya rapi */
+    font-size: 14px;    /* font lebih kecil supaya rapi */
   }
 }
 
@@ -169,11 +169,11 @@ footer {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: marquee 25s linear infinite;
+  animation: marquee 12s linear infinite;
 }
 
 .marquee-content span {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
