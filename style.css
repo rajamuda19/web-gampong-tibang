@@ -17,6 +17,12 @@ html {
     font-size: 10px;
   }
 }
+@media (max-width: 768px) {    /* tampilan menu pd hp */
+  nav ul li a {
+    font-size: 10px; /* atau 10px, sesuai keinginan */
+    padding: 6px 8px; /* bisa juga disesuaikan agar tidak terlalu lebar */
+  }
+}
 
 body {
   margin: 0;
