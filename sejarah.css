@@ -1,0 +1,159 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-image: linear-gradient(rgba(59, 162, 180, 0.5), rgba(59, 162, 180, 0.5)), url('gambar/foto.jpg');
+  background-size: 110%; /* zoom in */
+  background-position: center ;
+  background-repeat: no-repeat;
+  height: 200px; /* default untuk mobile */
+  position: relative;
+  color: white;
+}
+
+/* Layar lebar atau laptop (> 768px) */
+@media (min-width: 768px) {
+  header {
+    height: 400px; /* bisa diubah sesuai kebutuhan */
+    background-position: center 40%; /* mengatur ke bawah dan atas foto header */
+  }
+}
+
+nav {
+  background-color: #006400;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* wrap susunan rapi */
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px; /* default laptop */
+}
+
+nav ul li a:hover {
+  color: rgba(255, 238, 0, 0.918);
+  border-bottom: 2px solid rgba(255, 238, 0, 0.918);
+}
+nav ul li:hover {
+  background-color: #0077aa;
+}
+
+nav ul li ul.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0099cc;
+  min-width: 180px;
+  z-index: 1;
+}
+
+nav ul li ul.dropdown-content li a {
+  padding: 10px 15px;
+}
+
+nav ul li:hover ul.dropdown-content {
+  display: block;
+}
+
+/* Atur khusus untuk mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap; /* turun ke bawah */
+    justify-content: center ; /*  */
+    gap: 2px; /*jarak hori dan ver */ 
+  }
+
+nav ul li {
+flex: 1 1 15%; /* turun ke bwh klau ga muat*/
+margin: 4px 0;
+}
+
+  nav ul li a {
+    padding: 6px 6px; /* lebih kecil agar muat */
+    font-size: 10px;    /* font lebih kecil supaya rapi */
+  }
+}
+
+header .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  border: 1px solid #006400;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+footer {
+  background-color: #006400;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+.marquee-container {
+  background: linear-gradient(90deg, #006400, #006400);
+  color: white;
+  padding: 2px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.marquee-content {
+  background-color: #006400;
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-content span {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}

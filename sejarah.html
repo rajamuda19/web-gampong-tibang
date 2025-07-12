@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <title>Sejarah Gampong Tibang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sejarah.css" />
+</head>
+
+<body>
+    <!-- ========== SCRIPT UNTUK MENU ACTIVE ========== -->
+    <script>
+        const links = document.querySelectorAll("nav ul li a");
+        links.forEach(link => {
+            link.addEventListener("click", function() {
+                links.forEach(l => l.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+    </script>
+
+    <!-- ========== HEADER DENGAN PESAN BERJALAN ========== -->
+    <header>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>🔊 Selamat Datang di Website Gampong Tibang! Silakan kunjungi menu untuk informasi terbaru, layanan, dan kegiatan Gampong 🌿✨</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            
+            <li class="dropdown">
+                <a href="#">Berita ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Berita Gampong</a></li>
+                    <li><a href="#">Pengumuman</a></li>
+                    <li><a href="#">Kegiatan</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Profil Gampong ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Profil Wilayah Desa</a></li>
+                    <li><a href="sejarah.html">Sejarah Desa</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Pemerintahan Desa</a></li>
+            <li><a href="#">Data Desa</a></li>
+
+            <li class="dropdown">
+                <a href="#">KPM Tematik Pojok Statistik UINAR ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="strukturorganisasikpm.html">Struktur Organisasi</a></li>
+                    <li><a href="#">Kegiatan & Galeri</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        <!-- Tentang -->
+        <section class="sejarah">
+            <h2>Sejarah Gampong Tibang</h2>
+            <p>
+               Tibang  berasal dari kata ti (siti) panggilan seorang perempuan, bang (azan : bahasa Aceh). Alkisah pada suatu ketika pada masa penjajahan belanda terjadi pertempuran yang besar di sekitar benteng kuta kaphe yang tidak jauh dari lokasi Gampong Tibang saat sekarang, pada saat peretempuran berlangsung seluruh kaum laki-laki  Gampong Tibang dan sekitarnya menuju medan pertempuran. Hingga suatu saat masuklah waktu shalat sementara tidak ada satu orang pun laki-laki ditempat tersebut, karena nilai agama yang sangat tinggi timbullah inisiatif seorang perempuan bernama Siti  mengumandangkan azan. Kejadian tersebut berulang kali terjadi pada saat kejadian demikian terjadi, sehingga dinamakanlah wilayah tersebut Gampong Tibang. 
+               
+
+            </p>
+
+            <p>
+           Menurut keterangan orang tua Gampong Tibang, Gampong Tibang  dulunya merupakan salah satu dari tujuh gampong yang menjadi wilayah gampong tibang sekarang, keenam gampong yang lain bergabung dikarenakan Talo   (kalah karena tidak ada lagi penduduknya ).Keenam gampong talo tersebut yaitu :
+            1.	Meulagu
+            2.	Cot Mee
+            3.	Neuheun
+            4.	Lampoh Tarom
+            5.	Dayah
+            6.	Lam Tanjong
+            </p>
+            
+
+        </section>
+
+        <!-- Berita -->
+        <section class="berita">
+            <h2>Berita Terkini</h2>
+            <ul>
+                <li><strong>dd mm yyyy:</strong>nama kegiatan</li>
+                <li><strong>tanggal</strong>nama kegiatan</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <p>&copy; 2025 Gampong Tibang. Dibuat oleh Tim Pojok Statistik UIN Ar-Raniry</p>
+    </footer>
+</body>
+</html>
+
