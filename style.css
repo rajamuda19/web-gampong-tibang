@@ -7,12 +7,12 @@ html {
       line-height: 1.6;
     }
 
-    h1, h2, h3 {
-      font-size: 90%;
+    h1, h2, h3 {  /* judul paragraf */
+      font-size: 100%;
     }
 
-    p {
-      font-size: 14px;
+    p {   /* isi paragraf */
+      font-size: 10px;
     }
   }
   
