@@ -8,17 +8,6 @@
 </head>
 
 <body>
-    <!-- ========== SCRIPT UNTUK MENU ACTIVE ========== -->
-    <script>
-        const links = document.querySelectorAll("nav ul li a");
-        links.forEach(link => {
-            link.addEventListener("click", function() {
-                links.forEach(l => l.classList.remove("active"));
-                this.classList.add("active");
-            });
-        });
-    </script>
-
     <!-- ========== HEADER DENGAN PESAN BERJALAN ========== -->
     <header>
         <div class="marquee-container">
@@ -36,7 +25,7 @@
             <li><a href="#layanan">Layanan</a></li>
             
             <li class="dropdown">
-                <a href="#">Berita ▼</a>
+                <a href="#">Berita &#9660;</a>
                 <ul class="dropdown-content">
                     <li><a href="#">Berita Gampong</a></li>
                     <li><a href="#">Pengumuman</a></li>
@@ -45,7 +34,7 @@
             </li>
 
             <li class="dropdown">
-                <a href="#">Profil Gampong ▼</a>
+                <a href="#">Profil Gampong &#9660;</a>
                 <ul class="dropdown-content">
                     <li><a href="#">Profil Wilayah Desa</a></li>
                     <li><a href="sejarah.html">Sejarah Desa</a></li>
@@ -56,7 +45,7 @@
             <li><a href="#">Data Desa</a></li>
 
             <li class="dropdown">
-                <a href="#">KPM Tematik Pojok Statistik UINAR ▼</a>
+                <a href="#">KPM Tematik Pojok Statistik UINAR &#9660;</a>
                 <ul class="dropdown-content">
                     <li><a href="strukturorganisasikpm.html">Struktur Organisasi</a></li>
                     <li><a href="#">Kegiatan & Galeri</a></li>
@@ -69,32 +58,30 @@
     <main>
         <!-- Tentang -->
         <section class="sejarah">
-            <h2>Sejarah Gampong Tibang</h2>
+            <h1>Sejarah Gampong Tibang</h1>
             <p>
-               Tibang  berasal dari kata ti (siti) panggilan seorang perempuan, bang (azan : bahasa Aceh). Alkisah pada suatu ketika pada masa penjajahan belanda terjadi pertempuran yang besar di sekitar benteng kuta kaphe yang tidak jauh dari lokasi Gampong Tibang saat sekarang, pada saat peretempuran berlangsung seluruh kaum laki-laki  Gampong Tibang dan sekitarnya menuju medan pertempuran. Hingga suatu saat masuklah waktu shalat sementara tidak ada satu orang pun laki-laki ditempat tersebut, karena nilai agama yang sangat tinggi timbullah inisiatif seorang perempuan bernama Siti  mengumandangkan azan. Kejadian tersebut berulang kali terjadi pada saat kejadian demikian terjadi, sehingga dinamakanlah wilayah tersebut Gampong Tibang. 
-               
-
+                Tibang berasal dari kata ti (siti) panggilan seorang perempuan, bang (azan : bahasa Aceh). Alkisah pada suatu ketika pada masa penjajahan Belanda terjadi pertempuran yang besar di sekitar benteng Kuta Kaphe yang tidak jauh dari lokasi Gampong Tibang saat sekarang. Pada saat pertempuran berlangsung, seluruh kaum laki-laki Gampong Tibang dan sekitarnya menuju medan pertempuran. Hingga suatu saat masuklah waktu shalat sementara tidak ada satu orang pun laki-laki di tempat tersebut, karena nilai agama yang sangat tinggi timbullah inisiatif seorang perempuan bernama Siti mengumandangkan azan. Kejadian tersebut berulang kali terjadi pada saat kejadian demikian terjadi, sehingga dinamakanlah wilayah tersebut Gampong Tibang.
             </p>
 
             <p>
-           Menurut keterangan orang tua Gampong Tibang, Gampong Tibang  dulunya merupakan salah satu dari tujuh gampong yang menjadi wilayah gampong tibang sekarang, keenam gampong yang lain bergabung dikarenakan Talo   (kalah karena tidak ada lagi penduduknya ).Keenam gampong talo tersebut yaitu :
-            1.	Meulagu
-            2.	Cot Mee
-            3.	Neuheun
-            4.	Lampoh Tarom
-            5.	Dayah
-            6.	Lam Tanjong
+                Menurut keterangan orang tua Gampong Tibang, Gampong Tibang dulunya merupakan salah satu dari tujuh gampong yang menjadi wilayah Gampong Tibang sekarang, keenam gampong yang lain bergabung dikarenakan talo (kalah karena tidak ada lagi penduduknya). Keenam gampong talo tersebut yaitu:
             </p>
-            
-
+            <ol>
+                <li>Meulagu</li>
+                <li>Cot Mee</li>
+                <li>Neuheun</li>
+                <li>Lampoh Tarom</li>
+                <li>Dayah</li>
+                <li>Lam Tanjong</li>
+            </ol>
         </section>
 
         <!-- Berita -->
         <section class="berita">
             <h2>Berita Terkini</h2>
             <ul>
-                <li><strong>dd mm yyyy:</strong>nama kegiatan</li>
-                <li><strong>tanggal</strong>nama kegiatan</li>
+                <li><strong>dd mm yyyy:</strong> nama kegiatan</li>
+                <li><strong>tanggal:</strong> nama kegiatan</li>
             </ul>
         </section>
     </main>
@@ -103,6 +90,18 @@
     <footer>
         <p>&copy; 2025 Gampong Tibang. Dibuat oleh Tim Pojok Statistik UIN Ar-Raniry</p>
     </footer>
+
+    <!-- ========== SCRIPT UNTUK MENU ACTIVE ========== -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll("nav ul li a");
+        links.forEach(link => {
+            link.addEventListener("click", function() {
+                links.forEach(l => l.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+    });
+    </script>
 </body>
 </html>
-
